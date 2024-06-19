@@ -1,18 +1,14 @@
-This code is for FedLOC, a compress algorithm for federated learning based on layer output.
+This repository provides code for FedLOC, a compress algorithm for federated learning based on layer output.
 
-### data
-
-CIFAR10,CIFAR100,FMNIST dataset all can be used in the code.
-
-### requirement
+### Requirement
 
 * python 3.9.12
-* torch 1.12.1
+* pytorch 1.12.1
 * torchvision 0.13.1
 * cuda 10.2
 * fedlab 1.1.2
 
-### command
+### Command
 
 This example is running these compress methods based on CIFAR10 dataset and vgg11 model, it can use CIFAR100 and FMNIST dataset by change `--data CIFAR100` or `--data FMNIST`.
 
