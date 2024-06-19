@@ -11,7 +11,7 @@ This repository provides code for FedLOC, a compress algorithm for federated lea
 ### Command
 
 This example is running these compress methods based on CIFAR10 dataset and vgg11 model, it can use CIFAR100 and FMNIST dataset by change `--data CIFAR100` or `--data FMNIST`.
-The experiment result can be shown in the result folder.
+The experiment result can be shown in the `result` folder.
 
 ```cmake
 python server.py --gpu 0 --data CIFAR10 --model vgg11  --method Topk --k 0.01 --alpha 1.0 -lr 0.01
