@@ -32,11 +32,10 @@ parser.add_argument('-lr', "--learning_rate", type=float, default=0.001)
 parser.add_argument('-dc', "--learning_rate_decay", type=float, default=0.995)
 parser.add_argument('-comm', '--num_of_communication_rounds', type=int, default=600)
 parser.add_argument('-alpha', '--alpha', type=float, default=1.0)
-parser.add_argument('--data', type=str, default="MNIST")
-parser.add_argument('--model', type=str,default='CNN')
-parser.add_argument('--method', type=str, default='Topk')
-parser.add_argument('--change_size', type=str2bool, default=False)
-parser.add_argument('--k', type=float, default=0.05)
+parser.add_argument('-data', type=str, default="MNIST")
+parser.add_argument('-model', type=str,default='CNN')
+parser.add_argument('-method', type=str, default='Topk')
+parser.add_argument('-k', type=float, default=0.05)
 
 
 def get_args(args):
@@ -52,10 +51,9 @@ def get_args(args):
     data = args['data']
     model = args['model']
     method = args['method']
-    change_size=args['change_size']
     top_k = args['k']
     return gpu_num, total_clients, participants_fraction, local_epoch, batch_size, learning_rate, learning_rate_decay\
-        , total_round, alpha,data,method,top_k,model,change_size
+        , total_round, alpha,data,method,top_k,model
 
 
 def test_mkdir(path):
@@ -268,7 +266,7 @@ args = parser.parse_args()
 args = args.__dict__
 
 gpu_num, total_clients, participants_fraction, local_epoch, batch_size, learning_rate, learning_rate_decay \
-        , total_round, alpha,data,method,k,model_name,change_size = get_args(args)
+        , total_round, alpha,data,method,k,model_name = get_args(args)
 print(method)
 total_clients = 100
 participants_num = 10
