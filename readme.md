@@ -13,15 +13,25 @@ This repository provides code for FedLOC, a compress algorithm for federated lea
 This example is running these compress methods based on CIFAR10 dataset and vgg11 model,The experiment result can be shown in the `result` folder.
 
 `-data`: CIFAR10, CIFAR100, FMNIST
+
 `-model`:vgg11, CNN
+
 `-method`:Topk, FedLOC, STC, SBC, FedCAMS, STCLOC, SBCLOC, FedCAMSLOC
+
 `-k`: sparsity rate
+
 `-alpha`: Dirichlet parameter
+
 `-lr`: learning rate
+
 `-b`: local batch size
+
 `-comm`: the number of training rounds
+
 `-e`: the number of local epochs
+
 `-nc`: the number of total clients
+
 `-pf`: the proportion of participants in all of cliants
 
 ```cmake
