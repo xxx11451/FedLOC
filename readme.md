@@ -1,4 +1,4 @@
-This repository provides code for FedLOC, a compress algorithm for federated learning based on layer output.
+This repository provides code for FedLOC, a compression algorithm for federated learning based on layer output.
 
 ### Requirement
 
