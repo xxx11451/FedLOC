@@ -11,16 +11,25 @@ This repository provides code for FedLOC, a compress algorithm for federated lea
 ### Command
 
 This example is running these compress methods based on CIFAR10 dataset and vgg11 model,The experiment result can be shown in the `result` folder.
-
-
+'-data': CIFAR10, CIFAR100, FMNIST
+'-model':vgg11, CNN
+'-method':Topk, FedLOC, STC, SBC, FedCAMS, STCLOC, SBCLOC, FedCAMSLOC
+'-k': sparsity rate
+'-alpha': Dirichlet parameter
+'-lr': learning rate
+'-b': local batch size
+'-comm': the number of training rounds
+'-e': the number of local epochs
+'-nc': the number of total clients
+'-pf': the proportion of participants in all of cliants
 
 ```cmake
-python server.py --gpu 0 --data CIFAR10 --model vgg11  --method Topk --k 0.01 --alpha 1.0 -lr 0.01
-python server.py --gpu 0 --data CIFAR10 --model vgg11  --method FedLOC --k 0.01 --alpha 1.0 -lr 0.01
-python server.py --gpu 0 --data CIFAR10 --model vgg11  --method STC --k 0.01 --alpha 1.0 -lr 0.01
-python server.py --gpu 0 --data CIFAR10 --model vgg11  --method STCLOC --k 0.01 --alpha 1.0 -lr 0.01
-python server.py --gpu 0 --data CIFAR10 --model vgg11  --method SBC --k 0.01 --alpha 1.0 -lr 0.01
-python server.py --gpu 0 --data CIFAR10 --model vgg11  --method SBCLOC --k 0.01 --alpha 1.0 -lr 0.01
-python server.py --gpu 0 --data CIFAR10 --model vgg11  --method FedCAMS --k 0.01 --alpha 1.0 -lr 0.01
-python server.py --gpu 0 --data CIFAR10 --model vgg11  --method FedCAMSLOC --k 0.01 --alpha 1.0 -lr 0.01
+python server.py  --data CIFAR10 --model vgg11  --method Topk --k 0.01 --alpha 1.0 -lr 0.01
+python server.py  --data CIFAR10 --model vgg11  --method FedLOC --k 0.01 --alpha 1.0 -lr 0.01
+python server.py  --data CIFAR10 --model vgg11  --method STC --k 0.01 --alpha 1.0 -lr 0.01
+python server.py  --data CIFAR10 --model vgg11  --method STCLOC --k 0.01 --alpha 1.0 -lr 0.01
+python server.py  --data CIFAR10 --model vgg11  --method SBC --k 0.01 --alpha 1.0 -lr 0.01
+python server.py  --data CIFAR10 --model vgg11  --method SBCLOC --k 0.01 --alpha 1.0 -lr 0.01
+python server.py  --data CIFAR10 --model vgg11  --method FedCAMS --k 0.01 --alpha 1.0 -lr 0.01
+python server.py  --data CIFAR10 --model vgg11  --method FedCAMSLOC --k 0.01 --alpha 1.0 -lr 0.01
 ```
